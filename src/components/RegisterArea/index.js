@@ -15,7 +15,7 @@ function RegisterArea() {
 
     const onSubmit = (data) => {
         axios
-            .post('http://localhost:8000/customer/register', data)
+            .post('https://ecommerce-nodejs-api.onrender.com/customer/register', data)
             .then(function (response) {
                 if (response.data.success) {
                     alert('Success')

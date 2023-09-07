@@ -21,7 +21,7 @@ function ListProduct({ currentItems }) {
             quantity: 1
         }
         axios
-            .patch(`http://localhost:8000/cart/${productId}`, payload, {
+            .patch(`https://ecommerce-nodejs-api.onrender.com/cart/${productId}`, payload, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -39,20 +39,20 @@ function ListProduct({ currentItems }) {
     const [modal, setModal] = useState(false);
     const AddWishlist = (productId) => {
         const payload = { productId: productId }
-        console.log(payload)
-        axios
-            .patch(`http://localhost:8000/favorite`, payload, {
-                headers: {
-                    Authorization: `Bearer ${Cookies.get('token')}`,
-                },
-            })
-            .then((response) => {
-                setMessage(response.data.message)
-                setSuccess(response.data.success)
-                if (!response.data.success) {
-                    setIsLogin(false)
-                }
-            })
+        // console.log(payload)
+        // axios
+        //     .patch(`https://ecommerce-nodejs-api.onrender.com/favorite`, payload, {
+        //         headers: {
+        //             Authorization: `Bearer ${Cookies.get('token')}`,
+        //         },
+        //     })
+        //     .then((response) => {
+        //         setMessage(response.data.message)
+        //         setSuccess(response.data.success)
+        //         if (!response.data.success) {
+        //             setIsLogin(false)
+        //         }
+        //     })
     }
     const closeModal = () => {
         setModal(!modal);

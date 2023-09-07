@@ -43,7 +43,7 @@ function OfferCountdown() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/voucher/countDown`)
+            .get(`https://ecommerce-nodejs-api.onrender.com/voucher/countDown`)
             .then((response) => {
                 if (response.data.success) {
                     if (response.data.data) {

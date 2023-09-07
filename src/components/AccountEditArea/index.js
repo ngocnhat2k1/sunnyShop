@@ -35,7 +35,7 @@ function AccountEditArea() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/customer/shortProfile`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/customer/shortProfile`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -53,7 +53,7 @@ function AccountEditArea() {
             });
 
         axios
-            .get(`http://localhost:8000/customer/avatar`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/customer/avatar`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -70,7 +70,7 @@ function AccountEditArea() {
 
     const handleUpdateInformation = (data) => {
         axios
-            .patch(`http://localhost:8000/customer/updateInformation`, data, {
+            .patch(`https://ecommerce-nodejs-api.onrender.com/customer/updateInformation`, data, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -91,7 +91,7 @@ function AccountEditArea() {
 
     const handleUpdatePassword = (data) => {
         axios
-            .patch(`http://localhost:8000/customer/updatePassword`, data, {
+            .patch(`https://ecommerce-nodejs-api.onrender.com/customer/updatePassword`, data, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -135,7 +135,7 @@ function AccountEditArea() {
         }
         console.log(payload)
         axios
-            .patch(`http://localhost:8000/customer/updateAvatar`, payload, {
+            .patch(`https://ecommerce-nodejs-api.onrender.com/customer/updateAvatar`, payload, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },

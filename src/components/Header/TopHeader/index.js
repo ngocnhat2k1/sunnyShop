@@ -14,7 +14,7 @@ function TopHeader() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/customer/profile`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/customer/profile`, {
                 headers: {
                     Authorization: `Bearer ` + Cookies.get('token'),
                 },

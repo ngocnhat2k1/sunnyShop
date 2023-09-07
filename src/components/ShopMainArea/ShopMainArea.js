@@ -33,7 +33,7 @@ function ShopMainArea() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/product/?${searchParams.toString()}`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/products/?${searchParams.toString()}`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('adminToken')}`,
                 },
@@ -60,7 +60,7 @@ function ShopMainArea() {
             max: ''
         }
         axios
-            .post(`http://localhost:8000/product/search`, payload, {
+            .post(`https://ecommerce-nodejs-api.onrender.com/products/search`, payload, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -77,7 +77,7 @@ function ShopMainArea() {
     useEffect(() => {
         setListProduct(data)
         axios
-            .get(`http://localhost:8000/category/`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/category/`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },

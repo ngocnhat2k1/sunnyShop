@@ -20,7 +20,7 @@ function MessageModal({ subsc }) {
 
     const handleSubcribe = () => {
         axios
-            .get(`http://localhost:8000/customer/subscribe`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/customer/subscribe`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },

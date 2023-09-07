@@ -12,7 +12,7 @@ function CustomerAddress() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/address/`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/address/`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },

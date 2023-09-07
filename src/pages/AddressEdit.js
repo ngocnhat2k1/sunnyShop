@@ -13,7 +13,7 @@ function AddressEdit() {
 
     // useEffect(() => {
     //     axios
-    //         .get(`http://localhost:8000/api/retrieveToken`, {
+    //         .get(`https://ecommerce-nodejs-api.onrender.com/api/retrieveToken`, {
     //             headers: {
     //                 Authorization: `Bearer ${Cookies.get('token')}`,
     //             },
@@ -30,7 +30,7 @@ function AddressEdit() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/address/`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/address/`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },

@@ -10,7 +10,7 @@ function ListOrder() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/order/`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/order/`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },

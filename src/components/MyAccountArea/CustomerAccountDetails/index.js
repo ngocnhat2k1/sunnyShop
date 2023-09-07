@@ -11,11 +11,11 @@ function CustomerAccountDetails() {
     const [firstName, setFirstName] = useState('');
     const [email, setEmail] = useState('');
     const [avatar, setAvatar] = useState('');
-    const [subscribe ,setSubscribe] = useState('');
+    const [subscribe, setSubscribe] = useState('');
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/customer/profile`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/customer/profile`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -58,7 +58,7 @@ function CustomerAccountDetails() {
                             <label>Email</label>
                             <input type="text" name="email-name" value={email} className='form-control' disabled />
                         </div>
-                        <MessageModal subsc={subscribe}/>
+                        <MessageModal subsc={subscribe} />
                     </form>
                 </div>
             </div>

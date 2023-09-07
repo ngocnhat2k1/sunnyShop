@@ -10,7 +10,7 @@ function Cart() {
 
   // useEffect(() => {
   //   axios
-  //     .get(`http://localhost:8000/api/retrieveToken`, {
+  //     .get(`https://ecommerce-nodejs-api.onrender.com/api/retrieveToken`, {
   //       headers: {
   //         Authorization: `Bearer ${Cookies.get('token')}`,
   //       },

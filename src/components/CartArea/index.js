@@ -27,7 +27,7 @@ function CartArea() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/cart/`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/cart/`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -45,7 +45,7 @@ function CartArea() {
     }, [loader]);
     const handleDeleteProduct = (idProduct) => {
         axios
-            .delete(`http://localhost:8000/cart/${idProduct}`, {
+            .delete(`https://ecommerce-nodejs-api.onrender.com/cart/${idProduct}`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`
                 }
@@ -69,7 +69,7 @@ function CartArea() {
             quantity: qtt
         };
         axios
-            .patch(`http://localhost:8000/cart/${idProduct}/updateQuantity`, quantity, {
+            .patch(`https://ecommerce-nodejs-api.onrender.com/cart/${idProduct}/updateQuantity`, quantity, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -84,7 +84,7 @@ function CartArea() {
     }
     const handleClearCart = () => {
         axios
-            .get(`http://localhost:8000/cart/clearCart`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/cart/clearCart`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 }

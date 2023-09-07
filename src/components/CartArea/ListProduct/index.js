@@ -22,7 +22,7 @@ function ListProduct(prop) {
 
     const handleDeleteProduct = (idProduct) => {
         axios
-            .delete(`http://localhost:8000/cart/${idProduct}`, {
+            .delete(`https://ecommerce-nodejs-api.onrender.com/cart/${idProduct}`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`
                 }

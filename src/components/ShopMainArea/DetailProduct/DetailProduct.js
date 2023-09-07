@@ -51,7 +51,7 @@ const DetailProduct = () => {
     }
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/product/${productId}`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/products/${productId}`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -70,7 +70,7 @@ const DetailProduct = () => {
         const payload = { productId: productId }
         console.log(payload)
         axios
-            .patch(`http://localhost:8000/favorite`, payload, {
+            .patch(`https://ecommerce-nodejs-api.onrender.com/favorite`, payload, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -85,7 +85,7 @@ const DetailProduct = () => {
     }
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/feedback/${productId}`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/feedback/${productId}`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -101,7 +101,7 @@ const DetailProduct = () => {
             quantity: quantityPurchased
         }
         axios
-            .patch(`http://localhost:8000/cart/${productId}`, payload, {
+            .patch(`https://ecommerce-nodejs-api.onrender.com/cart/${productId}`, payload, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -118,7 +118,7 @@ const DetailProduct = () => {
     }
     const sentReview = (data) => {
         axios
-            .post(`http://localhost:8000/feedback/${productId}`, data, {
+            .post(`https://ecommerce-nodejs-api.onrender.com/feedback/${productId}`, data, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },

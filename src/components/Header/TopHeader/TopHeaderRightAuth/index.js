@@ -10,7 +10,7 @@ function TopHeaderRightAuth(user) {
         console.log("chạy")
         axios
             .get(
-                'http://localhost:8000/customer/logout',
+                'https://ecommerce-nodejs-api.onrender.com/customer/logout',
                 {
                     headers: {
                         Authorization: `Bearer ${Cookies.get('token')}`,

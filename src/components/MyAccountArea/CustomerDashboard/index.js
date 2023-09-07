@@ -12,7 +12,7 @@ function CustomerDashboard() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/customer/dashboard`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/customer/dashboard`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },

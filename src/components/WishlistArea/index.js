@@ -13,7 +13,7 @@ function WishlistArea() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/favorite`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/favorite`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },

@@ -12,7 +12,7 @@ const AddAddress = () => {
     const onSubmit = data => {
         console.log(data)
         axios
-            .post('http://localhost:8000/address', data,
+            .post('https://ecommerce-nodejs-api.onrender.com/address', data,
                 {
                     headers: {
                         Authorization: `Bearer ${Cookies.get('token')}`,

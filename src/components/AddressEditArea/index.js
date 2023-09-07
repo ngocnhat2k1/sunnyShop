@@ -33,7 +33,7 @@ function AddressEditArea({ id, stt }) {
     });
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/address/${id}`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/address/${id}`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -76,7 +76,7 @@ function AddressEditArea({ id, stt }) {
     const onSubmit = (data) => {
         console.log(data)
         axios
-            .put(`http://localhost:8000/address/${id}/update`, data,
+            .put(`https://ecommerce-nodejs-api.onrender.com/address/${id}/update`, data,
                 {
                     headers: {
                         Authorization: `Bearer ${Cookies.get('token')}`,

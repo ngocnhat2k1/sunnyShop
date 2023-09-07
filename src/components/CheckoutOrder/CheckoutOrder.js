@@ -30,7 +30,7 @@ const CheckoutOrder = () => {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/cart/`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/cart/`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -57,7 +57,7 @@ const CheckoutOrder = () => {
         }
         console.log('chạy do on click')
         axios
-            .post(`http://localhost:8000/order/`, payload, {
+            .post(`https://ecommerce-nodejs-api.onrender.com/order/`, payload, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
@@ -68,7 +68,7 @@ const CheckoutOrder = () => {
                 if (response.data.success) {
                     navigate("/order-completed")
                     axios
-                        .get(`http://localhost:8000/cart/clearCart`,
+                        .get(`https://ecommerce-nodejs-api.onrender.com/cart/clearCart`,
                             {
                                 headers: {
                                     Authorization: `Bearer ${Cookies.get('token')}`,
@@ -104,7 +104,7 @@ const CheckoutOrder = () => {
     };
     const onSubmit2 = (data) => {
         axios
-            .post(`http://localhost:8000/voucher/check`, data, {
+            .post(`https://ecommerce-nodejs-api.onrender.com/voucher/check`, data, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },

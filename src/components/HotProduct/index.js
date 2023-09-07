@@ -17,7 +17,7 @@ function HotProduct() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:8000/product/hotproducts`, {
+            .get(`https://ecommerce-nodejs-api.onrender.com/products/hotproducts`, {
                 headers: {
                     Authorization: `Bearer ${Cookies.get('token')}`,
                 },
